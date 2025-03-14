@@ -1,0 +1,4 @@
+tests:
+    test_1:
+        parameters:
+            book_title: "The Hobbit"

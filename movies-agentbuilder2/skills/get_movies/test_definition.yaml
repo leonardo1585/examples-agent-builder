@@ -1,0 +1,6 @@
+tests:
+    test_1:
+        credentials:
+            movies_api_key: "9032c6e7b6a18404cf2a8eda9aa4e2c6"
+        parameters:
+            movie_title: "Vingadores Guerra Infinita"

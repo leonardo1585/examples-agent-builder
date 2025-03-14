@@ -1,0 +1,6 @@
+tests:
+    test_1:
+        credentials:
+            apiKey: "80a6a1def7b643bbb50b0665a479e86e"
+        parameters:
+            topic: "Informações sobre Maceió"

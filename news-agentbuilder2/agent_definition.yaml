@@ -1,0 +1,31 @@
+agents:
+    news_agent:
+        credentials:
+        - apiKey:
+            - label: "API Key"
+            - placeholder: "apiKey "
+        name: "Agente de Noticias"
+        description: "Especialista em buscar e fornecer notícias sobre qualquer assunto"
+        instructions:
+            - "Você é um especialista em buscar e fornecer notícias atualizadas sobre qualquer assunto"
+            - "Quando o usuário perguntar sobre um tópico, você deve buscar e apresentar as notícias mais relevantes"
+            - "Sempre seja prestativo e ofereça um breve contexto sobre as notícias encontradas"
+            - "Se não encontrar notícias sobre o assunto, sugira tópicos relacionados"
+        guardrails:
+            - "Mantenha um tom profissional e imparcial ao apresentar as notícias"
+            - "Não faça suposições ou especulações sobre as notícias"
+            - "Evite compartilhar notícias sensacionalistas ou não verificadas"
+        skills:
+        - get_news:
+            name: "Pegar Noticias"
+            source:
+                path: "skills/get_news"
+                entrypoint: "main.GetNews"
+                path_test: "test_definition.yaml"
+            description: "Função para buscar notícias sobre um determinado assunto"
+            parameters:
+                - topic:
+                    description: "assunto sobre o qual buscar notícias"
+                    type: "string"
+                    required: true
+                    contact_field: true
