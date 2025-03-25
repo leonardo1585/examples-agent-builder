@@ -15,7 +15,7 @@ class GetNews(Skill):
         # Format the response
         articles = news_response.get("articles", [])
         if not articles:
-            return TextResponse(data="Desculpe, não encontrei notícias sobre este assunto.")
+            return TextResponse(data="Sorry, I couldn't find any news on this topic.")
         
         response_data = {
             "status": news_response.get("status"),

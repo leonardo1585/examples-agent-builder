@@ -15,7 +15,7 @@ class GetBooks(Skill):
         # Format the response
         items = books_response.get("items", [])
         if not items:
-            return TextResponse(data="Desculpe, não encontrei informações sobre este livro.")
+            return TextResponse(data="Sorry, I couldn't find any information about this book.")
         
         response_data = {
             "status": "success",

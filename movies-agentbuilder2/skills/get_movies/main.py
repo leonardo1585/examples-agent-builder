@@ -16,7 +16,7 @@ class GetMovies(Skill):
         # Format the response
         results = movie_response.get("results", [])
         if not results:
-            return TextResponse(data="Desculpe, não encontrei informações sobre este filme.")
+            return TextResponse(data="Sorry, I couldn't find any information about this movie.")
         
         response_data = {
             "status": "success",
